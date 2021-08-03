@@ -4,6 +4,10 @@
 
         <router-link :to="{ name: 'home'}" class="btn btn-primary">Home</router-link>
         <router-link :to="{ name: 'about'}" class="btn btn-primary">About</router-link>
+
+        <h1>{{ user.name }}</h1>
+
+        
     </div>   
 </template>   
 <script>   
@@ -23,6 +27,12 @@
               
         },   
         computed: {   
+
+            user: {
+                get() {
+                    return this.$store.state.currentUser.user;
+                }
+            }
         },   
         filters: {   
               

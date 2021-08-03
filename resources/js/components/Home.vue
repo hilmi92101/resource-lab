@@ -8,7 +8,9 @@
         <h1>{{ showName }}</h1>
         <h1>{{ showEmail }}</h1>
 
-        <button class="btn btn-success" @click="changeName('Maryam')">Change Name</button>
+        <button class="btn btn-success" @click="loadDb('Maryam')">Change Name</button>
+
+
 
         
     </div>   
@@ -33,7 +35,8 @@
     	methods: {   
 
             ...mapActions('currentUser', [
-                'changeName'
+                'changeName',
+                'loadDb',
             ]),
               
         },   

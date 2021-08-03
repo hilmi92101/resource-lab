@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LandingController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/{any?}', function () {
     return view('landing');
 });
+
+Route::post('/landing/data', [LandingController::class, 'index']);
 
 Auth::routes();
 

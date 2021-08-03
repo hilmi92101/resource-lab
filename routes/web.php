@@ -15,9 +15,14 @@ use App\Http\Controllers\LandingController;
 |
 */
 
+Route::get('/backoffice/{any?}', function () {
+    return view('backoffice.index');
+});
+
 Route::get('/{any?}', function () {
     return view('landing');
 });
+
 
 Route::post('/landing/data', [LandingController::class, 'index']);
 

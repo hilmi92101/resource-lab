@@ -5,8 +5,26 @@ const state = {
         email: 'hilmi@gmail.com',
     }
 };
-const getters = {};
-const actions = {};
+const getters = {
+
+    showName: state => {
+        
+        return state.user.name;
+    },
+    
+    showEmail: state => {
+        
+        return state.user.email;
+    },
+};
+const actions = {
+
+    changeName: (context, payload) => {
+
+        state.user.name = payload;
+        
+    }
+};
 const mutations = {};
 
 export default {

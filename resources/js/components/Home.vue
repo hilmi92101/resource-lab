@@ -5,12 +5,19 @@
         <router-link :to="{ name: 'home'}" class="btn btn-primary">Home</router-link>
         <router-link :to="{ name: 'about'}" class="btn btn-primary">About</router-link>
 
-        <h1>{{ user.name }}</h1>
+        <h1>{{ showName }}</h1>
+        <h1>{{ showEmail }}</h1>
+
+        <button class="btn btn-success" @click="changeName('Maryam')">Change Name</button>
 
         
     </div>   
 </template>   
 <script>   
+
+    import {mapActions} from 'vuex';
+    import {mapGetters} from 'vuex';
+
     export default {   
         components: {   
         },   
@@ -24,15 +31,18 @@
         created() {   
         },   
     	methods: {   
+
+            ...mapActions('currentUser', [
+                'changeName'
+            ]),
               
         },   
         computed: {   
 
-            user: {
-                get() {
-                    return this.$store.state.currentUser.user;
-                }
-            }
+            ...mapGetters('currentUser', [
+                'showName',
+                'showEmail',
+            ]),
         },   
         filters: {   
               

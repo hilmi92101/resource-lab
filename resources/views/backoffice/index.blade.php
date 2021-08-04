@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> 
     <!-- Styles --> 
     <link href="{{ asset('vendors/AdminLTE-3.1.0/dist/css/adminlte.min.css') }}" rel="stylesheet"> 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/backoffice/app.css') }}" rel="stylesheet"> 
 </head> 
 <body> 
     <div id="app"> 

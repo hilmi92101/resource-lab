@@ -10002,3 +10002,9 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.app-bo label.error {
+  margin: 0;
+  color: red;
+  font-weight: normal;
+  font-size: 14px;
+}

@@ -15,7 +15,7 @@
     <link href="{{ asset('css/backoffice/app.css') }}" rel="stylesheet"> 
 </head> 
 <body> 
-    <div id="app"> 
+    <div id="app" class="app-bo"> 
         <router-view></router-view> 
     </div> 
     <!-- Scripts --> 

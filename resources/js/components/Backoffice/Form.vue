@@ -30,11 +30,26 @@
 					<div class="card-body"> 
                         <div class="form-group">
 							<label for="username">Username</label>
-							<input type="text" class="form-control" id="username" placeholder="Enter username">
+							<input 
+								:class="errors.hasOwnProperty('username') ? 'is-invalid' : ''" 
+								v-model="form.username" 
+								type="text" 
+								class="form-control" id="username" placeholder="Enter username"
+							>
+							<label v-if="errors.hasOwnProperty('username')" class="error">
+								{{ errors.hasOwnProperty('username') ? errors.username[0] : '' }}
+							</label>
 						</div>
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input type="password" class="form-control" id="password" placeholder="Enter password">
+							<input 
+								:class="errors.hasOwnProperty('password') ? 'is-invalid' : ''" 
+								v-model="form.password" 
+								type="password" class="form-control" id="password" placeholder="Enter password"
+							>
+							<label v-if="errors.hasOwnProperty('password')" class="error">
+								{{ errors.hasOwnProperty('password') ? errors.password[0] : '' }}
+							</label>
 						</div>
 						<div class="form-group">
 							<label>Status</label>
@@ -71,9 +86,11 @@
 							</div>
 						</div>
 
+						<button @click.prevent="createUser()" class="btn btn-primary">Create</button>
+
                     </div>
-					<div class="card-footer">  
-                    </div>
+					<!-- <div class="card-footer">  
+                    </div>-->
 				</div>
 			</section>
 		</div>
@@ -83,7 +100,11 @@
  
 	</div>   
 </template>   
-<script>   
+<script>  
+
+	import {mapActions} from 'vuex';
+    import {mapGetters} from 'vuex';
+	
 	import Navbar from './_Navbar';
 	import Sidebar from './_Sidebar';
 	import Footer from './_Footer';
@@ -106,9 +127,18 @@
         created() {   
         },   
     	methods: {   
+
+			...mapActions('BOForm', [
+                'createUser',
+            ]),
               
         },   
         computed: {   
+
+			...mapGetters('BOForm', [
+                'form',
+                'errors',
+            ]),
         },   
         filters: {   
               

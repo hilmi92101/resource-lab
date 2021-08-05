@@ -28,7 +28,49 @@
 						</div>
 					</div>
 					<div class="card-body"> 
-                        Start creating your amazing application! 
+                        <div class="form-group">
+							<label for="username">Username</label>
+							<input type="text" class="form-control" id="username" placeholder="Enter username">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="password" placeholder="Enter password">
+						</div>
+						<div class="form-group">
+							<label>Status</label>
+							<select class="form-control">
+								<option>Single</option>
+								<option>Married</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Personal Detail</label>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox">
+								<label class="form-check-label">Has a Job</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox">
+								<label class="form-check-label">A Gamer</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox">
+								<label class="form-check-label">Can speak French</label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label>Willing to work with others</label>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="radio1" checked>
+								<label class="form-check-label">Yes</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="radio1">
+								<label class="form-check-label">No</label>
+							</div>
+						</div>
+
                     </div>
 					<div class="card-footer">  
                     </div>

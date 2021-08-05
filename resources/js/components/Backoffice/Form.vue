@@ -21,7 +21,7 @@
 			<section class="content">
 				<div class="card">
 					<div class="card-header">
-						<h3 class="card-title">Title</h3>
+						<h3 class="card-title">Validation</h3>
 						<div class="card-tools">
 							<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse"> <i class="fas fa-minus"></i> </button>
 							<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove"> <i class="fas fa-times"></i> </button>
@@ -43,47 +43,61 @@
 						<div class="form-group">
 							<label for="password">Password</label>
 							<input 
-								:class="errors.hasOwnProperty('password') && form.password.length < 1 ? 'is-invalid' : ''" 
+								:class="errors.hasOwnProperty('password') ? 'is-invalid' : ''" 
 								v-model="form.password" 
 								type="password" class="form-control" id="password" placeholder="Enter password"
 							>
-							<label v-if="errors.hasOwnProperty('password') && form.password.length < 1" class="error">
+							<label v-if="errors.hasOwnProperty('password')" class="error">
 								{{ errors.hasOwnProperty('password') ? errors.password[0] : '' }}
 							</label>
 						</div>
 						<div class="form-group">
 							<label>Status</label>
-							<select class="form-control">
-								<option>Single</option>
-								<option>Married</option>
+							<select 
+								:class="errors.hasOwnProperty('status') ? 'is-invalid' : ''" 
+								v-model="form.status" class="form-control"
+							>
+								<option value="1">Single</option>
+								<option value="2">Married</option>
 							</select>
+							<label v-if="errors.hasOwnProperty('status')" class="error">
+								{{ errors.hasOwnProperty('status') ? errors.status[0] : '' }}
+							</label>
 						</div>
 						<div class="form-group">
 							<label>Personal Detail</label>
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox">
-								<label class="form-check-label">Has a Job</label>
+							<div class="custom-control custom-checkbox">
+								<input v-model="form.personalDetail" value="1" id="customCheckbox1" class="custom-control-input" type="checkbox">
+								<label for="customCheckbox1" class="custom-control-label">Has a Job</label>
 							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox">
-								<label class="form-check-label">A Gamer</label>
+							<div class="custom-control custom-checkbox">
+								<input v-model="form.personalDetail" value="2" id="customCheckbox2" class="custom-control-input" type="checkbox">
+								<label for="customCheckbox2" class="custom-control-label">A Gamer</label>
 							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="checkbox">
-								<label class="form-check-label">Can speak French</label>
+							<div class="custom-control custom-checkbox">
+								<input v-model="form.personalDetail" value="3" id="customCheckbox3" class="custom-control-input" type="checkbox">
+								<label for="customCheckbox3" class="custom-control-label">Can speak French</label>
 							</div>
+							<label v-if="errors.hasOwnProperty('personalDetail')" class="error">
+								{{ errors.hasOwnProperty('personalDetail') ? errors.personalDetail[0] : '' }}
+							</label>
+							
+							
 						</div>
 
 						<div class="form-group">
 							<label>Willing to work with others</label>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="radio1" checked>
-								<label class="form-check-label">Yes</label>
+							<div class="custom-control custom-radio">
+								<input v-model="form.workWithOthers" value="1" class="custom-control-input" type="radio" id="customRadio1" name="customRadio">
+								<label for="customRadio1" class="custom-control-label">Yes</label>
 							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="radio1">
-								<label class="form-check-label">No</label>
+							<div class="custom-control custom-radio">
+								<input v-model="form.workWithOthers" value="2" class="custom-control-input" type="radio" id="customRadio2" name="customRadio">
+								<label for="customRadio2" class="custom-control-label">No</label>
 							</div>
+							<label v-if="errors.hasOwnProperty('workWithOthers')" class="error">
+								{{ errors.hasOwnProperty('workWithOthers') ? errors.workWithOthers[0] : '' }}
+							</label>
 						</div>
 
 						<button @click.prevent="createUser()" class="btn btn-primary">Create</button>

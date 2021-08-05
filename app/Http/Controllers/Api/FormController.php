@@ -14,17 +14,26 @@ class FormController extends Controller
         $val_rules =  [
             'username' => 'required',
             'password' => 'required|min:3',
+            'status' => 'required',
+            'personalDetail' => 'required|array|min:1',
+            'workWithOthers' => 'required',
         ];
 
         $form_data = [
             'username' => $request->form["username"],
             'password' => $request->form["password"],
+            'status' => $request->form["status"],
+            'personalDetail' => $request->form["personalDetail"],
+            'workWithOthers' => $request->form["workWithOthers"],
         ];
 
         $custom_messages = [
             'username.required' => 'The :attribute field is required.',
             'password.required' => 'The :attribute field is required.',
             'password.min' => 'The :attribute field minimum characters are 3.',
+            'status.required' => 'Please choose a status.',
+            'personalDetail.required' => '*Please choose at least 1 Personal Detail.',
+            'workWithOthers.required' => '*This field is required.',
         ];
 
         $validator = Validator::make($form_data, $val_rules, $custom_messages);

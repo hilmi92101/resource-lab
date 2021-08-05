@@ -3,9 +3,9 @@ const state = {
     form: {
         username: '',
         password: '',
-        status: '',
-        personalDetail: '',
-        workWithOthers: '',
+        status: '1',
+        personalDetail: [],
+        workWithOthers: '1',
     },
     errors: [],
 };
@@ -26,6 +26,9 @@ const actions = {
         let data = {
             form: state.form,
         }
+        console.log('------');
+        console.log(data);
+        console.log('------');
         let config = {
             headers: {
                 'Accept': 'application/json',

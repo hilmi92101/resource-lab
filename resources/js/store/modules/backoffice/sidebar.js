@@ -17,6 +17,11 @@ const state = {
             icon: 'fas fa-spinner',
         },
         {
+            title: 'Tabs',
+            router: 'about',
+            icon: 'fas fa-folder-open',
+        },
+        {
             title: 'Gallery',
             router: 'about',
             icon: 'far fa-image',

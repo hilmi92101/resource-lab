@@ -3,7 +3,7 @@ const state = {
     links: [
         {
             title: 'Form',
-            router: 'home',
+            router: 'backoffice-form',
             icon: 'fas fa-edit',
         },
         {

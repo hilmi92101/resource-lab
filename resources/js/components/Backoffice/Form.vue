@@ -31,23 +31,23 @@
                         <div class="form-group">
 							<label for="username">Username</label>
 							<input 
-								:class="errors.hasOwnProperty('username') ? 'is-invalid' : ''" 
+								:class="errors.hasOwnProperty('username') && form.username.length < 1 ? 'is-invalid' : ''" 
 								v-model="form.username" 
 								type="text" 
 								class="form-control" id="username" placeholder="Enter username"
 							>
-							<label v-if="errors.hasOwnProperty('username')" class="error">
+							<label v-if="errors.hasOwnProperty('username') && form.username.length < 1" class="error">
 								{{ errors.hasOwnProperty('username') ? errors.username[0] : '' }}
 							</label>
 						</div>
 						<div class="form-group">
 							<label for="password">Password</label>
 							<input 
-								:class="errors.hasOwnProperty('password') ? 'is-invalid' : ''" 
+								:class="errors.hasOwnProperty('password') && form.password.length < 1 ? 'is-invalid' : ''" 
 								v-model="form.password" 
 								type="password" class="form-control" id="password" placeholder="Enter password"
 							>
-							<label v-if="errors.hasOwnProperty('password')" class="error">
+							<label v-if="errors.hasOwnProperty('password') && form.password.length < 1" class="error">
 								{{ errors.hasOwnProperty('password') ? errors.password[0] : '' }}
 							</label>
 						</div>

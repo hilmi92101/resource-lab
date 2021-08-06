@@ -28,7 +28,7 @@
 						</div>
 					</div>
 					<div class="card-body">
-                    
+                        <vue2Dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"></vue2Dropzone>
                     </div>
 				</div>
 			</section>
@@ -40,6 +40,10 @@
 	</div>   
 </template>   
 <script>   
+
+    import vue2Dropzone from 'vue2-dropzone'
+    import 'vue2-dropzone/dist/vue2Dropzone.min.css';
+
 	import Navbar from './_Navbar';
 	import Sidebar from './_Sidebar';
 	import Footer from './_Footer';
@@ -51,11 +55,23 @@
 			Sidebar,
 			Footer,
 			ControlSidebar,
+			vue2Dropzone,
         },   
         props: {   
         },  
     	data() {   
             return {   
+                dropzoneOptions: {
+                    url: '/api/dropzone/upload',
+                    thumbnailWidth: 150,
+                    maxFilesize: 25.0,
+                    headers: { 
+                        'Accept': 'application/json',
+                        //'Authorization': 'Bearer ' + this.token,
+                        //'Content-Type': 'multipart/form-data' 
+                    }
+                    
+                },
                    
             }   
         },    

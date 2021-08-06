@@ -10008,3 +10008,6 @@ h3 {
   font-weight: normal;
   font-size: 14px;
 }
+.app-bo .dropzone {
+  border-radius: 20px;
+}

@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\FormController;
+use App\Http\Controllers\Api\DropzoneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::group([
 
     // Form
     Route::post('form/create/user', [FormController::class, 'createUser']); 
+    Route::post('dropzone/upload', [DropzoneController::class, 'upload']); 
     
 
 

@@ -28,7 +28,7 @@ const state = {
         },
         {
             title: 'Dropzone',
-            router: 'about',
+            router: 'backoffice-dropzone',
             icon: 'fas fa-upload',
         },
 

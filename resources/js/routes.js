@@ -3,6 +3,7 @@ import About from './components/About';
 
 import Backoffice from './components/Backoffice/Index'; 
 import BOForm from './components/Backoffice/Form'; 
+import BODropzone from './components/Backoffice/Dropzone'; 
 
 export default { 
     mode: 'history', 
@@ -17,7 +18,6 @@ export default {
             path:'/about', 
             component: About 
         }, 
-
         { 
             name: 'backoffice',
             path:'/backoffice', 
@@ -27,6 +27,11 @@ export default {
             name: 'backoffice-form',
             path:'/backoffice/form', 
             component: BOForm 
+        },
+        { 
+            name: 'backoffice-dropzone',
+            path:'/backoffice/dropzone', 
+            component: BODropzone 
         },
     ] 
 }

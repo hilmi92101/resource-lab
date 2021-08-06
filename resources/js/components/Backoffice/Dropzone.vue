@@ -28,7 +28,7 @@
 						</div>
 					</div>
 					<div class="card-body">
-                        <vue2Dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"></vue2Dropzone>
+                        <vue2Dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions" v-on:vdropzone-sending="sendingEvent"></vue2Dropzone>
                     </div>
 				</div>
 			</section>
@@ -65,19 +65,25 @@
                     url: '/api/dropzone/upload',
                     thumbnailWidth: 150,
                     maxFilesize: 25.0,
+                    dictDefaultMessage: '<i class="fas fa-upload"></i> Drop to upload...',
                     headers: { 
-                        'Accept': 'application/json',
+                        //'Accept': 'application/json',
                         //'Authorization': 'Bearer ' + this.token,
                         //'Content-Type': 'multipart/form-data' 
                     }
                     
                 },
+                
                    
             }   
         },    
         created() {   
         },   
     	methods: {   
+            sendingEvent (file, xhr, formData) {
+                formData.append('paramName', 'some value or other');
+                formData.append('id', 1234567);
+            },
               
         },   
         computed: {   

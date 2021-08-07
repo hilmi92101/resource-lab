@@ -28,7 +28,15 @@
 						</div>
 					</div>
 					<div class="card-body">
-                        <vue2Dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions" v-on:vdropzone-sending="sendingEvent"></vue2Dropzone>
+                        <vue2Dropzone 
+							ref="myVueDropzone" 
+							id="dropzone" 
+							:options="dropzoneOptions" 
+							v-on:vdropzone-sending="sendingEvent"
+							v-on:vdropzone-success="successEvent"
+							v-on:vdropzone-error="errorEvent"
+						>
+						</vue2Dropzone>
                     </div>
 				</div>
 			</section>
@@ -84,6 +92,16 @@
                 formData.append('paramName', 'some value or other');
                 formData.append('id', 1234567);
             },
+			successEvent (file, response) {
+                console.log(file);
+                console.log(response);
+            },
+			errorEvent (file, message, xhr){
+				console.log(file);
+				console.log(message);
+				console.log(xhr);
+			},
+			
               
         },   
         computed: {   

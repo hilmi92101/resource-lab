@@ -16,7 +16,7 @@
 
 			var body = $('body');
 			setTimeout(function(){
-				if(body.find('#sidebar-overlay').length < 1){
+				if(body.find('#sidebar-overlay').length < 1 && window.innerWidth <= 922){
 					$('[data-widget="pushmenu"]').PushMenu('collapse');
 				}
 			},100);
@@ -30,6 +30,7 @@
         filters: {  
              
         },
+		
 		
           
     }  

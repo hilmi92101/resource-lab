@@ -23,7 +23,7 @@ const state = {
         },
         {
             title: 'Gallery',
-            router: 'about',
+            router: 'backoffice-gallery',
             icon: 'far fa-image',
         },
         {

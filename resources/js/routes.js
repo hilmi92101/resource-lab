@@ -4,6 +4,7 @@ import About from './components/About';
 import Backoffice from './components/Backoffice/Index'; 
 import BOForm from './components/Backoffice/Form'; 
 import BODropzone from './components/Backoffice/Dropzone'; 
+import BOGallery from './components/Backoffice/Gallery'; 
 
 export default { 
     mode: 'history', 
@@ -33,5 +34,12 @@ export default {
             path:'/backoffice/dropzone', 
             component: BODropzone 
         },
+        { 
+            name: 'backoffice-gallery',
+            path:'/backoffice/gallery', 
+            component: BOGallery 
+        },
+
+        
     ] 
 }

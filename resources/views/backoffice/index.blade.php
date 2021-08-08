@@ -20,7 +20,7 @@
     </div> 
     <!-- Scripts --> 
     <script src="{{ asset('js/app.js') }}"></script> 
-    <script src="{{ asset('vendors/AdminLTE-3.1.0/dist/js/adminlte.js') }}"></script> 
+    <script src="{{ asset('vendors/AdminLTE-3.1.0/dist/js/adminlte.min.js') }}"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 </body> 
 </html>

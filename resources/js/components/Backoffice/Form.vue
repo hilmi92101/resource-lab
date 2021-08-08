@@ -110,6 +110,7 @@
 		</div>
 		<Footer></Footer>
 		<ControlSidebar></ControlSidebar>
+		<SidebarOverlay></SidebarOverlay>
 
  
 	</div>   
@@ -123,6 +124,7 @@
 	import Sidebar from './_Sidebar';
 	import Footer from './_Footer';
 	import ControlSidebar from './_ControlSidebar';
+	import SidebarOverlay from './_SidebarOverlay';
 
     export default {   
         components: {   
@@ -130,6 +132,7 @@
 			Sidebar,
 			Footer,
 			ControlSidebar,
+			SidebarOverlay,
         },   
         props: {   
         },  

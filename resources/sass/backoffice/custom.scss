@@ -11,7 +11,24 @@
         border-radius: 20px;
     }
 
-    
+    .owl-carousel-container {
+        position: relative;
+        .next { 
+            position: absolute;
+            top: 40%;
+            right: 3%;
+            z-index: 2;
+            color: #797878;
+        }
+        
+        .prev { 
+            position: absolute;
+            top: 40%;
+            left: 3%;
+            z-index: 2;
+            color: #797878;
+        }
+    }
 
 
 }

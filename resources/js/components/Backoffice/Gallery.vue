@@ -29,77 +29,36 @@
 					</div>
 					<div class="card-body">
 
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card">
+                        <div class="owl-carousel-container">
+                            <carousel 
+                                :nav="false"
+                                :dots="false"
+                                :margin="20"
+                                :items="3"
+                                :stagePadding="40"
+                                :responsive="{0:{items:1,},600:{items:3,}}"
+                            >
+                                <template slot="prev">
+                                    <span class="prev">
+                                        <i class="fas fa-angle-left fa-3x"></i>
+                                    </span>
+                                </template>
+                                <div v-for="card in cards" class="card">
                                     <img src="//placehold.it/500x280" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
+                                        <h5 class="card-title">{{ card.title }}</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                         <a href="#" class="btn btn-primary">Go somewhere</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="//placehold.it/500x280" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="//placehold.it/500x280" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="//placehold.it/500x280" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="//placehold.it/500x280" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="//placehold.it/500x280" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="//placehold.it/500x280" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
+                                <template slot="next">
+                                    <span class="next">
+                                        <i class="fas fa-angle-right fa-3x"></i>
+                                    </span>
+                                </template>
+
+                            </carousel>
+                                
                         </div>
 
 
@@ -122,6 +81,8 @@
 	import ControlSidebar from './_ControlSidebar';
 	import SidebarOverlay from './_SidebarOverlay';
 
+    import carousel from 'vue-owl-carousel';
+
     export default {   
         components: {   
 			Navbar,
@@ -129,13 +90,38 @@
 			Footer,
 			ControlSidebar,
 			SidebarOverlay,
+
+            carousel,
         },   
         props: {   
         },  
     	data() {   
             return {   
                 
-                   
+                cards: [
+                    {
+                        title: 'Card title 1'
+                    },
+                    {
+                        title: 'Card title 2'
+                    },
+                    {
+                        title: 'Card title 3'
+                    },
+                    {
+                        title: 'Card title 4'
+                    },
+                    {
+                        title: 'Card title 5'
+                    },
+                    {
+                        title: 'Card title 6'
+                    },
+                    {
+                        title: 'Card title 7'
+                    },
+                ],
+                
             }   
         },    
         created() {   

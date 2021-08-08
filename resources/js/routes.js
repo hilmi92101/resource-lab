@@ -1,5 +1,6 @@
 import Home from './components/Home';  
 import About from './components/About'; 
+import Blank from './components/Blank'; 
 
 import Backoffice from './components/Backoffice/Index'; 
 import BOForm from './components/Backoffice/Form'; 
@@ -18,7 +19,13 @@ export default {
             name: 'about',
             path:'/about', 
             component: About 
+        },
+        { 
+            name: 'blank',
+            path:'/blank', 
+            component: Blank 
         }, 
+        
         { 
             name: 'backoffice',
             path:'/backoffice', 

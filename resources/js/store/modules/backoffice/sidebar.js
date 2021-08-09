@@ -27,6 +27,11 @@ const state = {
             icon: 'far fa-image',
         },
         {
+            title: 'Button Menu',
+            router: 'backoffice-button-menu',
+            icon: 'fas fa-ellipsis-v',
+        },
+        {
             title: 'Dropzone',
             router: 'backoffice-dropzone',
             icon: 'fas fa-upload',

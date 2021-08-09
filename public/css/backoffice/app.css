@@ -10002,6 +10002,9 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.app-bo .pointer {
+  cursor: pointer;
+}
 .app-bo label.error {
   margin: 0;
   color: red;

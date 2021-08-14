@@ -10023,6 +10023,7 @@ h3 {
   right: 3%;
   z-index: 2;
   color: #797878;
+  cursor: pointer;
 }
 .app-bo .owl-carousel-container .prev {
   position: absolute;
@@ -10030,4 +10031,5 @@ h3 {
   left: 3%;
   z-index: 2;
   color: #797878;
+  cursor: pointer;
 }

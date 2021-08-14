@@ -8,21 +8,18 @@ use Illuminate\Http\Request;
 use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Traits\TokenAdminTrait;
 
 
 class IndexController extends Controller
 {
-    private $tokenName = 'authTokenAdmin';
+    use TokenAdminTrait;
 
     public function getAllUsers(Request $request)
     {
-
-        $token = Auth::guard('admin-api')->user()->token();
-        if($token->name !== $this->tokenName){
-            return response()->json([
-                'success' => false,
-                'message' => 'Something went wrong',
-            ]);
+        $is_valid_data = $this->isValidToken();
+        if(!$is_valid_data["success"]){
+            return response()->json($is_valid_data);
         }
 
         $admins = Admin::all();

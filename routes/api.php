@@ -35,13 +35,13 @@ Route::group([
     Route::prefix('/user')->group(function(){
 
         Route::post('login', [LoginController::class, 'login']); 
-        Route::middleware('auth:api')->post('/all', [UserController::class, 'index']); 
+        Route::middleware(['auth:api', 'ensure.token.user.is.valid'])->post('/all', [UserController::class, 'index']); 
     });
 
     Route::prefix('/admin')->group(function(){
         Route::post('login', [AdminLoginController::class, 'login']); 
 
-        Route::middleware('auth:admin-api')->group(function() { 
+        Route::middleware(['auth:admin-api', 'ensure.token.admin.is.valid'])->group(function() { 
             Route::post('get-all-users', [AdminIndexController::class, 'getAllUsers']); 
         });
     });

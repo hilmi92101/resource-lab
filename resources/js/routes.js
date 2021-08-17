@@ -7,6 +7,7 @@ import BOForm from './components/Backoffice/Form';
 import BODropzone from './components/Backoffice/Dropzone'; 
 import BOGallery from './components/Backoffice/Gallery'; 
 import BOButtonMenu from './components/Backoffice/ButtonMenu'; 
+import BOLoginUser from './components/Backoffice/LoginUser'; 
 
 export default { 
     mode: 'history', 
@@ -51,6 +52,11 @@ export default {
             name: 'backoffice-button-menu',
             path:'/backoffice/button-menu', 
             component: BOButtonMenu 
+        },
+        { 
+            name: 'backoffice-login-user',
+            path:'/backoffice/login-user', 
+            component: BOLoginUser
         },
 
         

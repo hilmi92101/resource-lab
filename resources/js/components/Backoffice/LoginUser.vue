@@ -85,10 +85,12 @@
         },   
     	methods: {   
             login(){
+
+                var self = this;
                 let data = {
                     user: this.user,
                 }
-                console.log(data);
+
                 let config = {
                     headers: {
                         'Accept': 'application/json',
@@ -97,7 +99,9 @@
                 axios.post('/api/user/login', data, config)
                 .then(function (response) {
                     console.log(response.data);
-                    // //context.commit('loadDb', response.data);
+
+                    //self.$store.dispatch('BOUser/updateUserState', response.data, {root:true});
+                    self.$store.dispatch('BOUser/updateUserState', response.data);
 
                     // if(response.data.hasOwnProperty('errors')){ 
                     //     context.commit('errorCreateUser', response.data.errors);
@@ -111,6 +115,7 @@
         computed: {  
             ...mapGetters('BOUser', [
                 'user',
+                'accessToken',
                 'errors',
             ]), 
         },   

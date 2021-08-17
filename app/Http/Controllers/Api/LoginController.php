@@ -12,6 +12,32 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
+        
+        $validator = $this->loginValidation($request);
+        if($validator->fails()){
+            return response()->json([
+                'success' => false,
+                'msg'    => 'Invalid form data',
+                'errors' => $validator->errors(),
+            ]);
+        }
+
+        if(!Auth::attempt( ['email' => $request->user["email"], 'password' => $request->user["password"]] )){
+            return response()->json([
+                'message' => 'Invalid login credentials.',
+            ]);
+        }
+
+        $access_token = Auth::user()->createToken('authToken')->accessToken;
+        return response()->json([
+            'user' => Auth::user(),
+            'access_token' => $access_token,
+        ]);
+
+    }
+
+    public function loginValidation($request)
+    {
         $val_rules =  [
             'email' => 'required',
             'password' => 'required|min:3',
@@ -28,26 +54,6 @@ class LoginController extends Controller
             'password.min' => 'The :attribute field minimum characters are 3.',
         ];
 
-        $validator = Validator::make($form_data, $val_rules, $custom_messages);
-        if($validator->fails()){
-             return response()->json([
-                'success' => false,
-                'msg'    => 'Invalid form data',
-                'errors' => $validator->errors(),
-            ]);
-        }
-
-        if(!Auth::attempt($form_data)){
-            return response()->json([
-                'message' => 'Invalid login credentials.',
-            ]);
-        }
-
-        $access_token = Auth::user()->createToken('authToken')->accessToken;
-        return response()->json([
-            'user' => Auth::user(),
-            'access_token' => $access_token,
-        ]);
-
+        return Validator::make($form_data, $val_rules, $custom_messages);
     }
 }

@@ -35,7 +35,7 @@ Route::group([
     Route::prefix('/user')->group(function(){
 
         Route::post('login', [LoginController::class, 'login']); 
-        Route::middleware(['auth:api', 'ensure.token.user.is.valid'])->post('/all', [UserController::class, 'index']); 
+        Route::middleware(['auth:api', 'ensure.token.user.is.valid'])->post('/data', [UserController::class, 'index']); 
     });
 
     Route::prefix('/admin')->group(function(){

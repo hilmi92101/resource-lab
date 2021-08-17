@@ -24,7 +24,7 @@ class UserController extends Controller
 
         return response()->json([
             'user' => Auth::user(),
-            'users' => $users,
+            //'users' => $users,
         ]);
     }
 }

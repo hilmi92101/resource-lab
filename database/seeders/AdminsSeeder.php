@@ -15,6 +15,7 @@ class AdminsSeeder extends Seeder
     public function run()
     {
         $data = [];
+        
 		$admin = [
             'username' => 'superadmin',
             'password' => \Hash::make('qawsedrf1'),

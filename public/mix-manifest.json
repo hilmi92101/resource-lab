@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/vuetify.js": "/js/vuetify.js",
     "/css/backoffice/app.css": "/css/backoffice/app.css",
     "/css/app.css": "/css/app.css"
 }

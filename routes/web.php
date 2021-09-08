@@ -19,6 +19,10 @@ Route::get('/backoffice/{any?}', function () {
     return view('backoffice.index');
 });
 
+Route::get('/vuetify/{any?}', function () {
+    return view('vuetify.index');
+});
+
 Route::get('/{any?}', function () {
     return view('landing');
 });

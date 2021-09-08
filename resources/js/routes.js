@@ -9,6 +9,8 @@ import BOGallery from './components/Backoffice/Gallery';
 import BOButtonMenu from './components/Backoffice/ButtonMenu'; 
 import BOLoginUser from './components/Backoffice/LoginUser'; 
 
+import VLanding from './components/Vuetify/Landing'; 
+
 export default { 
     mode: 'history', 
     routes: [ 
@@ -58,6 +60,13 @@ export default {
             path:'/backoffice/login-user', 
             component: BOLoginUser
         },
+
+        { 
+            name: 'vuetify-landing',
+            path:'/vuetify/', 
+            component: VLanding
+        },
+        
 
         
 

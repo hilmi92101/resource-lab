@@ -9,7 +9,9 @@ import BOGallery from './components/Backoffice/Gallery';
 import BOButtonMenu from './components/Backoffice/ButtonMenu'; 
 import BOLoginUser from './components/Backoffice/LoginUser'; 
 
-import VLanding from './components/Vuetify/Landing'; 
+import VLanding from './components/Vuetify/Landing';
+import VStudyingHome from './components/Vuetify/Studying/Home';  
+import VStudyingAbout from './components/Vuetify/Studying/About';  
 
 export default { 
     mode: 'history', 
@@ -66,9 +68,19 @@ export default {
             path:'/vuetify/', 
             component: VLanding
         },
-        
 
-        
+        { 
+            name: 'vuetify-studying-home',
+            path:'/vuetify/studying/', 
+            component: VStudyingHome
+        },
+
+        { 
+            name: 'vuetify-studying-about',
+            path:'/vuetify/studying/about', 
+            component: VStudyingAbout
+        },
+
 
         
     ] 

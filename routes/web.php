@@ -21,7 +21,7 @@ Route::get('/backoffice/{any?}', function () {
 
 Route::get('/vuetify/{any?}', function () {
     return view('vuetify.index');
-});
+})->where('any', '.*');
 
 Route::get('/{any?}', function () {
     return view('landing');

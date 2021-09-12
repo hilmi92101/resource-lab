@@ -14,7 +14,7 @@
 </head> 
 <body> 
     <div id="app" class="app-vuetify"> 
-        <router-view></router-view>  
+        <vuetify-app></vuetify-app>
     </div> 
     <!-- Scripts --> 
     <script src="{{ asset('js/vuetify.js') }}"></script> 

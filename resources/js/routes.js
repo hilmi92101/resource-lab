@@ -12,6 +12,8 @@ import BOLoginUser from './components/Backoffice/LoginUser';
 import VLanding from './components/Vuetify/Landing';
 import VStudyingHome from './components/Vuetify/Studying/Home';  
 import VStudyingAbout from './components/Vuetify/Studying/About';  
+import VStudyingTextColor from './components/Vuetify/Studying/TextColor';  
+import VStudyingButtonsIcons from './components/Vuetify/Studying/ButtonsIcons';  
 
 export default { 
     mode: 'history', 
@@ -68,18 +70,28 @@ export default {
             path:'/vuetify/', 
             component: VLanding
         },
-
         { 
             name: 'vuetify-studying-home',
             path:'/vuetify/studying/', 
             component: VStudyingHome
         },
-
         { 
             name: 'vuetify-studying-about',
             path:'/vuetify/studying/about', 
             component: VStudyingAbout
         },
+        { 
+            name: 'vuetify-studying-text-color',
+            path:'/vuetify/studying/text-color', 
+            component: VStudyingTextColor
+        },
+        { 
+            name: 'vuetify-studying-buttons-icons',
+            path:'/vuetify/studying/buttons-icons', 
+            component: VStudyingButtonsIcons
+        },
+
+        
 
 
         

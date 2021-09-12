@@ -26,5 +26,6 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/vuetify.js', 'public/js/vuetify.js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/backoffice/app.scss', 'public/css/backoffice')
+    .sass('resources/sass/vuetify/app.scss', 'public/css/vuetify')
     .vue()
     .sourceMaps();

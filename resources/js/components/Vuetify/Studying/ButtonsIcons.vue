@@ -56,6 +56,23 @@
             </v-icon>
         </v-btn>
 
+        <v-btn
+            color="blue-grey"
+            class="ma-2 white--text"
+        >
+            Upload
+            <v-icon
+                right
+                dark
+            >
+            mdi-account-arrow-left
+            </v-icon>
+        </v-btn>
+
+        
+
+
+
     </div>   
 </template>   
 <script>   

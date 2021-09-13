@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import Vuetify, { VLayout, VToolbar, VNavigationDrawer } from 'vuetify/lib';
+import Vuetify, { VLayout } from 'vuetify/lib';
 
 Vue.use(Vuetify, {
-  components: { VLayout, VToolbar, VNavigationDrawer },
+  components: { VLayout },
 })
 
 const opts = {}

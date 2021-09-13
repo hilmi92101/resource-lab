@@ -14,7 +14,6 @@
      -->
 
     <!-- Styles --> 
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="{{ asset('css/vuetify/app.css') }}?v={{ mt_rand() }}" rel="stylesheet"> 
 </head> 
 <body> 

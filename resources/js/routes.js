@@ -14,6 +14,8 @@ import VStudyingHome from './components/Vuetify/Studying/Home';
 import VStudyingAbout from './components/Vuetify/Studying/About';  
 import VStudyingTextColor from './components/Vuetify/Studying/TextColor';  
 import VStudyingButtonsIcons from './components/Vuetify/Studying/ButtonsIcons';  
+import VStudyingBreakpointsVisibility from './components/Vuetify/Studying/BreakpointsVisibility';  
+
 
 export default { 
     mode: 'history', 
@@ -90,7 +92,12 @@ export default {
             path:'/vuetify/studying/buttons-icons', 
             component: VStudyingButtonsIcons
         },
-
+        { 
+            name: 'vuetify-studying-breakpoints-visibility',
+            path:'/vuetify/studying/breakpoints-visibility', 
+            component: VStudyingBreakpointsVisibility
+        },
+        
         
 
 

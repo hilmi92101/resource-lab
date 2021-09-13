@@ -14,13 +14,13 @@
      -->
 
     <!-- Styles --> 
-    <link href="{{ asset('css/vuetify/app.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/vuetify/app.css') }}?v={{ mt_rand() }}" rel="stylesheet"> 
 </head> 
 <body> 
     <div id="app" class="app-vuetify"> 
         <vuetify-app></vuetify-app>
     </div> 
     <!-- Scripts --> 
-    <script src="{{ asset('js/vuetify.js') }}"></script> 
+    <script src="{{ asset('js/vuetify.js') }}?v={{ mt_rand() }}"></script> 
 </body> 
 </html>

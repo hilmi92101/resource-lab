@@ -15,7 +15,6 @@ import VStudyingAbout from './components/Vuetify/Studying/About';
 import VStudyingTextColor from './components/Vuetify/Studying/TextColor';  
 import VStudyingButtonsIcons from './components/Vuetify/Studying/ButtonsIcons';  
 import VStudyingBreakpointsVisibility from './components/Vuetify/Studying/BreakpointsVisibility';  
-import VStudyingNavbar from './components/Vuetify/Studying/_Navbar';  
 
 
 export default { 
@@ -70,12 +69,12 @@ export default {
 
         { 
             name: 'vuetify-landing',
-            path:'/vuetify/', 
+            path:'/vuetify', 
             component: VLanding
         },
         { 
             name: 'vuetify-studying-home',
-            path:'/vuetify/studying/', 
+            path:'/vuetify/studying', 
             component: VStudyingHome
         },
         { 
@@ -98,12 +97,6 @@ export default {
             path:'/vuetify/studying/breakpoints-visibility', 
             component: VStudyingBreakpointsVisibility
         },
-        { 
-            name: 'vuetify-studying-navbar',
-            path:'/vuetify/studying/navbar', 
-            component: VStudyingNavbar
-        },
-        
         
 
 

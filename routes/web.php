@@ -23,6 +23,10 @@ Route::get('/vuetify/{any?}', function () {
     return view('vuetify.index');
 })->where('any', '.*');
 
+Route::get('/vuetify-test/{any?}', function () {
+    return view('vuetify.test');
+})->where('any', '.*');
+
 Route::get('/{any?}', function () {
     return view('landing');
 });

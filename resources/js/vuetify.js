@@ -9,6 +9,7 @@ import Vuetify from '../plugins/vuetify';
 require('./vuetify-bootstrap');
 
 Vue.component('vuetify-app', require('./components/Vuetify/App.vue').default);
+Vue.component('test-app', require('./components/Vuetify/Test.vue').default);
 
 Vue.use(VueRouter);  
 

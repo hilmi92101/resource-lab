@@ -22,7 +22,7 @@
             </v-btn>
         </v-app-bar>
 
-        <v-navigation-drawer app  v-model="drawer" class="indigo">
+        <v-navigation-drawer app  v-model="drawer" class="success">
             test
         </v-navigation-drawer>
 

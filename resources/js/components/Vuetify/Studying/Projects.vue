@@ -1,7 +1,7 @@
 <template>   
     <div class="projects">  
         
-        <h1 class="subtitle-1 grey--text">Projects</h1>
+        <v-subheader class="subtitle-1 grey--text">Projects</v-subheader>
 
         <v-container class="my-5">
             <p>

@@ -16,6 +16,7 @@ import VStudyingTextColor from './components/Vuetify/Studying/TextColor';
 import VStudyingButtonsIcons from './components/Vuetify/Studying/ButtonsIcons';  
 import VStudyingBreakpointsVisibility from './components/Vuetify/Studying/BreakpointsVisibility';  
 import VStudyingProjects from './components/Vuetify/Studying/Projects';  
+import VStudyingCards from './components/Vuetify/Studying/Cards';  
 
 
 export default { 
@@ -102,6 +103,11 @@ export default {
             name: 'vuetify-studying-projects',
             path:'/vuetify/studying/projects', 
             component: VStudyingProjects
+        },
+        { 
+            name: 'vuetify-studying-cards',
+            path:'/vuetify/studying/cards', 
+            component: VStudyingCards
         },
         
         

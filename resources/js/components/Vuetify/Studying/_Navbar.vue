@@ -66,7 +66,7 @@
         },  
     	data() {   
             return {   
-                drawer: false,
+                drawer: true,
                 selectedItem: false,
                 links: [
                     {
@@ -98,6 +98,11 @@
                         icon:'work',
                         text:'Projects',
                         route:'/vuetify/studying/projects',
+                    },
+                    {
+                        icon:'work',
+                        text:'Cards',
+                        route:'/vuetify/studying/cards',
                     },
                     
                     

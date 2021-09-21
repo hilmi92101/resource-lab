@@ -1,6 +1,6 @@
 <template>   
     <div>  
-        Unused page
+        Landing page
 
     </div>   
 </template>   

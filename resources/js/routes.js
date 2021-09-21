@@ -9,7 +9,7 @@ import BOGallery from './components/Backoffice/Gallery';
 import BOButtonMenu from './components/Backoffice/ButtonMenu'; 
 import BOLoginUser from './components/Backoffice/LoginUser'; 
 
-import VLanding from './components/Vuetify/Landing';
+//import VLanding from './components/Vuetify/Landing';
 import VStudyingHome from './components/Vuetify/Studying/Home';  
 import VStudyingAbout from './components/Vuetify/Studying/About';  
 import VStudyingTextColor from './components/Vuetify/Studying/TextColor';  
@@ -17,6 +17,8 @@ import VStudyingButtonsIcons from './components/Vuetify/Studying/ButtonsIcons';
 import VStudyingBreakpointsVisibility from './components/Vuetify/Studying/BreakpointsVisibility';  
 import VStudyingProjects from './components/Vuetify/Studying/Projects';  
 import VStudyingCards from './components/Vuetify/Studying/Cards';  
+
+import VLandingApp from './components/Vuetify/Landing/App';
 
 
 export default { 
@@ -69,11 +71,11 @@ export default {
             component: BOLoginUser
         },
 
-        { 
-            name: 'vuetify-landing',
-            path:'/vuetify', 
-            component: VLanding
-        },
+        // { 
+        //     name: 'vuetify-landing',
+        //     path:'/vuetify', 
+        //     component: VLanding
+        // },
         { 
             name: 'vuetify-studying-home',
             path:'/vuetify/studying', 
@@ -109,9 +111,15 @@ export default {
             path:'/vuetify/studying/cards', 
             component: VStudyingCards
         },
-        
-        
 
+        { 
+            name: 'vuetify-studying-cards',
+            path:'/vuetify/landing/v1', 
+            component: VLandingApp
+        },
+        
+        
+        
         
     ] 
 }
